@@ -18,19 +18,19 @@ form.addEventListener("submit", (event) => {
   try {
     // Check for empty inputs
     if (dividend === "" || divider === "") {
-      throw new Error(
+      console.error(
         "Division not performed. Both values are required in inputs. Try again"
       );
     }
     // Check for division by zero
     else if (divider == 0) {
-      throw new Error(
+      console.error(
         "Division not performed. Invalid number provided. Try again"
       );
     }
     // Check for non-numeric inputs
     else if (isNaN(dividend) || isNaN(divider)) {
-      throw new Error("Something critical went wrong. Please reload the page");
+      console.error("Something critical went wrong. Please reload the page");
     }
     // If all checks pass, display the rounded result
     else result.innerText = roundedResult;
